@@ -1,22 +1,25 @@
-# rtsp-html5-streaming-capture-frame
+# Point-of-sale-system-in-PHP
 
-- Uses node & ffmpegto convert the RTSP live stream from an IP camera into `<video>` tag of HTML
-- Captures frame on button click from video and populates `<img>` tag using canvas. 
+- add inventry , soled item detail , invoices etc
 
 # Installation
 
-- `sudo apt-get install ffmpeg nodejs nginx`
+- `download and install xampp https://www.apachefriends.org/download.html`
 
-- `npm install http-server`
+- `run apache and mysql services in xampp control panal`
 
-- `cd rtsp-html5-streaming-capture-frame`
+- `open xampp folder`
 
-- Change RTSP camera path in `livestream.js`
+- `open htdocs folder`
 
-- `nodejs livestream.js`
+- Clone git using cmd or terminal `git clone https://github.com/mubeenakhter27/poing-of-sale-in-PHP.git`
 
-- Run `http-server` to run `index.html` in a server
+- Visit `127.0.0.1/phpmyadmin`
 
-- Visit `127.0.0.1:8080`
+- Create Database `ipos`
+
+- inport databse file frome database folder `database/ipos.sql`
+
+- Visit `127.0.0.1/poing-of-sale-in-PHP`
 
 ![Sample](https://github.com/omair18/rtsp-html5-streaming-capture-frame/blob/master/screenshot.jpeg)
