@@ -22,4 +22,10 @@
 
 - Visit `127.0.0.1/poing-of-sale-in-PHP`
 
-![Sample](https://github.com/omair18/rtsp-html5-streaming-capture-frame/blob/master/screenshot.jpeg)
+![Sample](https://github.com/mubeenakhter27/poing-of-sale-in-PHP/blob/master/img/example1.png)
+
+- login for Admin username `admin` password `admin`
+
+- login for User username `user` password `user`
+
+![Sample](https://github.com/mubeenakhter27/poing-of-sale-in-PHP/blob/master/img/example2.png)
