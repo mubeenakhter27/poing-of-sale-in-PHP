@@ -38,7 +38,7 @@
             if($select->rowCount() > 0 ){
                 echo'<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Nama Pengguna Sudah Ada", "warning", {
+                    swal("Warning", "Username already exists", "warning", {
                     button: "Continue",
                         });
                     });
@@ -57,7 +57,8 @@
                 if($insert->execute()){
                     echo'<script type="text/javascript">
                         jQuery(function validation(){
-                        swal("Success", "Pengguna Baru Sudah Ditambahkan", "success", {
+                        swal("Success", "
+                        New User Added", "success", {
                         button: "Continue",
                             });
                         });
@@ -77,7 +78,7 @@
             <div class="col-md-4">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Daftarkan Akun Baru</h3>
+                        <h3 class="box-title">Register a New Account</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->

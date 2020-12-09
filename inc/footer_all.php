@@ -1,13 +1,13 @@
  <!-- Main Footer -->
-  <footer class="main-footer">
+  <!-- <footer class="main-footer"> -->
     <!-- To the right -->
-    <div class="pull-right hidden-xs">
+    <!-- <div class="pull-right hidden-xs">
       Inventory|POS Ver. 1.5
-    </div>
+    </div> -->
     <!-- Default to the left -->
-    <strong>Toko Hussein</a>.</strong> Jl. Jakarta Ruko No.1
+    <!-- <strong>Toko Hussein</a>.</strong> Jl. Jakarta Ruko No.1
   </footer>
-</div>
+</div> -->
 <!-- ./wrapper -->
 
 <!-- AdminLTE App -->
