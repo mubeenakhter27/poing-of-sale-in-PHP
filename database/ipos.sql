@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2019 at 07:22 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Dec 09, 2020 at 07:10 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,53 @@ SET time_zone = "+00:00";
 --
 -- Database: `ipos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_account_holders`
+--
+
+CREATE TABLE `tbl_account_holders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `phone_number` varchar(30) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `dbStatus` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_account_holders`
+--
+
+INSERT INTO `tbl_account_holders` (`id`, `name`, `phone_number`, `address`, `dbStatus`) VALUES
+(1, 'mubeen akhter', '03238863200', 'chaman park mughalpura lahroe', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_account_holder_transections`
+--
+
+CREATE TABLE `tbl_account_holder_transections` (
+  `id` int(11) NOT NULL,
+  `account_holder_id` int(11) NOT NULL,
+  `debit` varchar(30) NOT NULL,
+  `credit` varchar(30) NOT NULL,
+  `date` varchar(30) NOT NULL,
+  `dbStatus` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_account_holder_transections`
+--
+
+INSERT INTO `tbl_account_holder_transections` (`id`, `account_holder_id`, `debit`, `credit`, `date`, `dbStatus`) VALUES
+(1, 1, '3000', '', '09/12/2020', 1),
+(2, 1, '', '3000', '09/12/2020', 1),
+(3, 1, '2500', '', '2020-12-09', 1),
+(4, 1, '2500', '', '2020-12-09', 1),
+(5, 1, '', '5000', '2020-12-09', 1);
 
 -- --------------------------------------------------------
 
@@ -38,7 +84,7 @@ CREATE TABLE `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`cat_id`, `cat_name`) VALUES
-(1, 'Suger');
+(1, 'suger');
 
 -- --------------------------------------------------------
 
@@ -61,7 +107,7 @@ CREATE TABLE `tbl_invoice` (
 --
 
 INSERT INTO `tbl_invoice` (`invoice_id`, `cashier_name`, `order_date`, `time_order`, `total`, `paid`, `due`) VALUES
-(1, 'Mubeen Akhter', '2019-10-20', '11:30', 100, 200, -100);
+(87, 'admin', '2020-10-20', '18:25', 100, 300, -200);
 
 -- --------------------------------------------------------
 
@@ -113,7 +159,7 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`product_id`, `product_code`, `product_name`, `product_category`, `purchase_price`, `sell_price`, `stock`, `min_stock`, `product_satuan`, `description`, `img`) VALUES
-(1, 'TT0040', 'Suger', 'Suger', 90, 100, 7, 5, 'Kg', 'Lorem Ipsum', '5f8ea04d614cf.png');
+(1, 'TT0040', 'Suger', 'Suger', 90, 100, 6, 5, 'Kg', 'Lorem Ipsum', '5f8ea04d614cf.png');
 
 -- --------------------------------------------------------
 
@@ -153,12 +199,24 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `username`, `fullname`, `password`, `role`, `is_active`) VALUES
-(1, 'admin', 'admin@admin.com', 'admin', 'Admin', 1),
-(2, 'user', 'user@user.com', 'user', 'Operator', 0);
+(2, 'user', 'user@user.com', 'user', 'Operator', 0),
+(6, 'mubeen', 'Mubeen Akhter', 'admin', 'Admin', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tbl_account_holders`
+--
+ALTER TABLE `tbl_account_holders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_account_holder_transections`
+--
+ALTER TABLE `tbl_account_holder_transections`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_category`
@@ -205,16 +263,28 @@ ALTER TABLE `tbl_user`
 --
 
 --
+-- AUTO_INCREMENT for table `tbl_account_holders`
+--
+ALTER TABLE `tbl_account_holders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_account_holder_transections`
+--
+ALTER TABLE `tbl_account_holder_transections`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_invoice`
 --
 ALTER TABLE `tbl_invoice`
-  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `tbl_invoice_detail`
@@ -238,7 +308,7 @@ ALTER TABLE `tbl_satuan`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

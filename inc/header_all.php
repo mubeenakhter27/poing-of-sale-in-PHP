@@ -4,7 +4,7 @@
   <!-- <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-  <title>IPOS | Dashboard</title>
+  <title>Shalimar Supreme Rice | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="shortcut icon" href="img/logo1.jpg">
@@ -65,7 +65,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>I</b>POS</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Inventory|</b>POS</span>
+        <span class="logo-lg"><b>Shalimar Supreme Rice|</b>POS</span>
       </a>
 
       <!-- Header Navbar -->
@@ -124,6 +124,7 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
           <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
+          <li><a href="./register_account_holder.php"><i class="fa fa-list-alt"></i> <span>Account Holders</span></a></li>
           <li><a href="./category.php"><i class="fa fa-list-alt"></i> <span>Product Category</span></a></li>
           <li><a href="./satuan.php"><i class="fa fa-balance-scale"></i> <span>Product Unit</span></a></li>
           <li><a href="./register.php"><i class="fa fa-users"></i> <span>Application Users</span></a></li>
