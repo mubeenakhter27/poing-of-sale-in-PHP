@@ -156,9 +156,9 @@
                                     <td><?php echo $row->phone_number; ?></td>
                                     <td><?php echo $row->address; ?></td>
                                     <td>
-                                        <a href="translation.php?id=<?php echo $row->user_id; ?>"
+                                        <a href="translation.php?id=<?php echo $row->id; ?>"
                                         class="btn btn-success btn-sm">debit</i></a>
-                                        <a href="translation.php?id=<?php echo $row->user_id; ?>"
+                                        <a href="translation.php?id=<?php echo $row->id; ?>"
                                         class="btn btn-success btn-sm">credit</i></a>
                                         <!-- <a href="deactivate.php?id=" class="btn btn-info btn-sm"
                                         onclick="return confirm('Are You Sure, You Want To Deactivate The Account?')" name="deactivate">

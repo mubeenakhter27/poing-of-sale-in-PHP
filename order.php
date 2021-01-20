@@ -60,7 +60,7 @@
                                 <th style="width:20px;">No</th>
                                 <th style="width:100px;">Officer</th>
                                 <th style="width:100px;">Date</th>
-                                <th style="width:100px;">Admission fee</th>
+                                <th style="width:100px;">Amount</th>
                                 <th style="width:50px;">Option</th>
                             </tr>
                         </thead>

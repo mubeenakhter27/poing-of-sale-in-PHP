@@ -12,19 +12,19 @@ $pdf = new FPDF('P','mm', array(80,200));
 $pdf->AddPage();
 
 $pdf->SetFont('Arial','B',16);
-$pdf->Cell(60,10,'Mubeen Akhter',0,1,'C');
+$pdf->Cell(60,10,'Shalimar Rise',0,1,'C');
 
 $pdf->Line(10,18,72,18);
 $pdf->Line(10,19,72,19);
 
 $pdf->SetFont('Arial','',8);
-$pdf->Cell(60,3,'Chaman park , Fateh ghar Mughalpura',0,1,'C');
+$pdf->Cell(60,3,'Lahore , Punjab Pakistan',0,1,'C');
 
 $pdf->SetFont('Arial','',8);
-$pdf->Cell(63,3,'Tahsil Cantt, Distric Lahore',0,1,'C');
+$pdf->Cell(63,3,'',0,1,'C');
 
 $pdf->SetFont('Arial','',8);
-$pdf->Cell(63,4,'No. Telp: 0092-323-8863-200 (Ali)',0,1,'C');
+$pdf->Cell(63,4,'No. Telp:  ',0,1,'C');
 
 $pdf->Line(10,30,72,30);
 $pdf->Line(10,31,72,31);

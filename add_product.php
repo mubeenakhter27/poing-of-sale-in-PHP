@@ -192,16 +192,16 @@
                             <label for="">Stock</label><br>
                             <span class="text-muted">*Unit according to product</span>
                             <input type="number" min="1" step="1"
-                            class="form-control" name="stock" required>
+                            class="form-control" name="stock" >
                         </div>
                         <div class="form-group">
                             <label for="">Minimal Inventory</label><br>
                             <input type="number" min="1" step="1"
-                            class="form-control" name="min_stock" required>
+                            class="form-control" name="min_stock" >
                         </div>
                         <div class="form-group">
                             <label for="">Unit</label>
-                            <select class="form-control" name="satuan" required>
+                            <select class="form-control" name="satuan" >
                                 <?php
                                 $select = $pdo->prepare("SELECT * FROM tbl_satuan");
                                 $select->execute();
