@@ -7,7 +7,7 @@
 
 $delete = $pdo->prepare("DELETE FROM tbl_satuan WHERE kd_satuan = '".$_GET['id']." '");
 if($delete->execute()){
-    header('location:satuan.php');
+    header('location:units.php');
 }
 
 

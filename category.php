@@ -17,7 +17,7 @@
       if($select->rowCount() > 0 ){
           echo'<script type="text/javascript">
               jQuery(function validation(){
-              swal("Warning", "Kategori Sudah Ada", "warning", {
+              swal("Warning", "Category Already Existting!", "warning", {
               button: "Continue",
                   });
               });
@@ -30,7 +30,7 @@
             if($insert->execute()){
               echo '<script type="text/javascript">
               jQuery(function validation(){
-              swal("Success", "Kategori Baru Sudah Ditambahkan", "success", {
+              swal("Success", "New Category Added!", "success", {
               button: "Continue",
                   });
               });
@@ -92,7 +92,7 @@
                         <a href="edit_category.php?id=<?php echo $row->cat_id; ?>"
                         class="btn btn-info btn-sm" name="btn_edit"><i class="fa fa-pencil"></i></a>
                         <a href="delete_category.php?id=<?php echo $row->cat_id; ?>"
-                        onclick="return confirm('Hapus Kategori?')"
+                        onclick="return confirm('Are You Sour?')"
                         class="btn btn-danger btn-sm" name="btn_delete"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>

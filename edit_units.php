@@ -36,7 +36,7 @@ if($id=$_GET['id']){
     $row = $select->fetch(PDO::FETCH_OBJ);
     $sat_name = $row->nm_satuan;
 }else{
-    header('location:satuan.php');
+    header('location:units.php');
 }
 
 
@@ -70,7 +70,7 @@ if($id=$_GET['id']){
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                       <button type="submit" class="btn btn-primary" name="btn_edit">Update</button>
-                      <a href="satuan.php" class="btn btn-warning">Back</a>
+                      <a href="units.php" class="btn btn-warning">Back</a>
                   </div>
                 </form>
             </div>

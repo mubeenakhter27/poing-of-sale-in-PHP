@@ -16,7 +16,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Produk
+       Product
       </h1>
     </section>
 
@@ -34,7 +34,7 @@
                 <div class="col-md-6">
                   <ul class="list-group">
 
-                    <center><p class="list-group-item list-group-item-success">Detil Produk</p></center>
+                    <center><p class="list-group-item list-group-item-success">Detil Product</p></center>
                     <li class="list-group-item"> <b>Product Code</b>     :<span class="label badge pull-right"><?php echo $row->product_code; ?></span></li>
                     <li class="list-group-item"><b>Product name</b>    :<span class="label label-info pull-right"><?php echo $row->product_name; ?></span></li>
                     <li class="list-group-item"><b>Product Category</b>        :<span class="label label-primary pull-right"><?php echo $row->product_category; ?></span></li>

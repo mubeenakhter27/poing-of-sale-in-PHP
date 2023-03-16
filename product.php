@@ -49,6 +49,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Bar Code</th>
                                 <th>Product</th>
                                 <th>Code</th>
                                 <th>Capital</th>
@@ -67,6 +68,7 @@
                             ?>
                                 <tr>
                                 <td><?php echo $no++ ;?></td>
+                                <td><?php echo $row->product_bar_code ;?></td>
                                 <td><?php echo $row->product_name; ?></td>
                                 <td><?php echo $row->product_code; ?></td>
                                 <td>Rp <?php echo number_format($row->purchase_price);?></td>

@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
             if($select->rowCount() > 0 ){
                 echo'<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Satuan Telah Ada", "warning", {
+                    swal("Warning", "Unit Already Existting!", "warning", {
                     button: "Continue",
                         });
                     });
@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
                     if($insert->execute()){
                         echo '<script type="text/javascript">
                         jQuery(function validation(){
-                        swal("Success", "Satuan Baru Telah Dibuat", "success", {
+                        swal("Success", "New Unit Added!", "success", {
                         button: "Continue",
                             });
                         });
@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
                   <div class="box-body">
                     <div class="form-group">
                       <label for="category">Unit Name</label>
-                      <input type="text" class="form-control" name="satuan" placeholder="Masukan Satuan">
+                      <input type="text" class="form-control" name="satuan" placeholder="Enter Unit">
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
@@ -98,10 +98,10 @@ if(isset($_POST['submit'])){
                     <td><?php echo $no ++ ?></td>
                     <td><?php echo $row->nm_satuan; ?></td>
                     <td>
-                        <a href="edit_satuan.php?id=<?php echo $row->kd_satuan; ?>"
+                        <a href="edit_units.php?id=<?php echo $row->kd_satuan; ?>"
                         class="btn btn-info btn-sm" name="btn_edit"><i class="fa fa-pencil"></i></a>
-                        <a href="delete_satuan.php?id=<?php echo $row->kd_satuan; ?>"
-                        onclick="return confirm('Hapus Satuan?')"
+                        <a href="delete_units.php?id=<?php echo $row->kd_satuan; ?>"
+                        onclick="return confirm('Delete Unit?')"
                         class="btn btn-danger btn-sm" name="btn_delete"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>

@@ -71,7 +71,7 @@ if(isset($_POST['btn_login'])){
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.php"><b>Shalimar Supreme Rice|</b>POS</a>
+    <a href="index.php"><b>UnderGround Motors|</b>POS</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

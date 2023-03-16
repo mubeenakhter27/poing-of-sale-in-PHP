@@ -68,7 +68,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>I</b>POS</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Inventory|</b>POS</span>
+      <span class="logo-lg"><b>UG Motors|</b>POS</span>
     </a>
 
     <!-- Header Navbar -->
