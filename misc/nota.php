@@ -12,13 +12,13 @@ $pdf = new FPDF('P','mm', array(80,200));
 $pdf->AddPage();
 
 $pdf->SetFont('Arial','B',16);
-$pdf->Cell(60,10,'Shalimar Rise',0,1,'C');
+$pdf->Cell(60,10,'UG Motors',0,1,'C');
 
 $pdf->Line(10,18,72,18);
 $pdf->Line(10,19,72,19);
 
 $pdf->SetFont('Arial','',8);
-$pdf->Cell(60,3,'Lahore , Punjab Pakistan',0,1,'C');
+$pdf->Cell(60,3,'Hyderabad , Sindh Pakistan',0,1,'C');
 
 $pdf->SetFont('Arial','',8);
 $pdf->Cell(63,3,'',0,1,'C');

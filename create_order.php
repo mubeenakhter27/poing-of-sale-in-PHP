@@ -13,7 +13,7 @@
 
 
     error_reporting(0);
-    date_default_timezone_set('Asia/Makassar');
+    date_default_timezone_set('Asia/Karachi');
 
     function fill_product($pdo){
       $output= '';
@@ -107,7 +107,7 @@
             $insert->execute();
 
           }
-          echo '<script>location.href="order.php";</script>';
+          // echo '<script>location.href="order.php";</script>';
 
         }
       }

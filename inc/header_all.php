@@ -123,8 +123,8 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-          <!-- <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Home</span></a></li> -->
-          <li><a href="./register_account_holder.php"><i class="fa fa-list-alt"></i> <span>Account Holders</span></a></li>
+          <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
+          <!-- <li><a href="./register_account_holder.php"><i class="fa fa-list-alt"></i> <span>Account Holders</span></a></li> -->
           <li><a href="./category.php"><i class="fa fa-list-alt"></i> <span>Product Category</span></a></li>
           <li><a href="./units.php"><i class="fa fa-balance-scale"></i> <span>Product Unit</span></a></li>
           <li><a href="./product.php"><i class="fa fa-archive"></i> <span>Product</span></a></li>
