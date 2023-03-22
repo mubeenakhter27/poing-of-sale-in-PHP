@@ -218,7 +218,7 @@
                         <div class="form-group">
                             <label for="">Product Brief Description</label>
                             <textarea name="description" id="description"
-                            cols="30" rows="10" class="form-control" required></textarea>
+                            cols="30" rows="10" class="form-control"></textarea>
                         </div>
                     </div>
 
@@ -227,7 +227,7 @@
                             <label for="">Product Image</label><br>
                             <br>
                             <input type="file" class="input-group"
-                            name="product_img" onchange="readURL(this);" required> <br>
+                            name="product_img" onchange="readURL(this);"> <br>
                             <img id="img_preview" src="upload/<?php echo $row->img?>" alt="Preview" class="img-responsive" />
                         </div>
                     </div>
