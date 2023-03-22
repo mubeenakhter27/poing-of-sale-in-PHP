@@ -35,14 +35,15 @@
                         });
                     });
                     </script>';
-            }elseif (strlen($code)>6 || strlen($code)<6) {
-                    echo'<script type="text/javascript">
-                    jQuery(function validation(){
-                    swal("Warning", "Code Must Be 6 Characters As Per the Rules", "warning", {
-                    button: "Continue",
-                        });
-                    });
-                    </script>';
+            // }elseif (strlen($code)>6 || strlen($code)<6) {
+            //         echo'<script type="text/javascript">
+            //         jQuery(function validation(){
+            //         swal("Warning", "Code Must Be 6 Characters As Per the Rules", "warning", {
+            //         button: "Continue",
+            //             });
+            //         });
+            //         </script>';
+            // 
             }else{
             $img = $_FILES['product_img']['name'];
             $img_tmp = $_FILES['product_img']['tmp_name'];
@@ -177,7 +178,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Capital price</label>
-                            <input type="number" min="1000" step="1000"class="form-control"
+                            <input type="number"class="form-control"
                             name="purchase_price" required>
                         </div>
                         <div class="form-group">
