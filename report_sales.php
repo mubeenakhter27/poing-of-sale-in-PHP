@@ -103,10 +103,11 @@
 
                 <!-- /.col -->
               </div>
-
+              <button Class="btn btn-success" id="button-a">Download Excel</button>
+              <br /><br />
               <!--- Transaction Table -->
               <div style="overflow-x:auto;">
-                  <table class="table table-striped" id="mySalesReport">
+                  <table class="table table-striped" id="mytable">
                       <thead>
                           <tr>
                             <th>Officer</th>
@@ -201,8 +202,22 @@
     });
 
     $(document).ready( function () {
-      $('#mySalesReport').DataTable();
+      $('.table-striped').DataTable();
     } );
+    var JsDate = new Date() + '.xlsx';
+    var wb = XLSX.utils.table_to_book(document.getElementById('mytable'), {sheet:"Sheet JS"});
+        var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+        function s2ab(s) {
+
+                        var buf = new ArrayBuffer(s.length);
+                        var view = new Uint8Array(buf);
+                        for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+                        return buf;
+        }
+        $("#button-a").click(function(){
+        saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), JsDate);
+        });
   </script>
 
   <script>

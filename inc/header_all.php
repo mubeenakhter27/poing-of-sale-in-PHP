@@ -12,6 +12,9 @@
   <script src="bower_components/sweetalert/sweetalert.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
+  <!-- xlxs download option -->
+  <script lang="javascript" src="dist/xlsx.full.min.js"></script>
+  <script lang="javascript" src="dist/FileSaver.min.js"></script>
   <!-- jQuery 3 -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
