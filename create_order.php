@@ -34,6 +34,7 @@
       $order_date = date("Y-m-d",strtotime($_POST['orderdate']));
       $order_time = date("H:i", strtotime($_POST['timeorder']));
       $total = $_POST['total'];
+      $customer_name = $_POST['customer_name'];
       $paid = $_POST['paid'];
       $due = $_POST['due'];
 
@@ -58,8 +59,8 @@
       }else{
 
 
-        $insert = $pdo->prepare("INSERT INTO tbl_invoice(cashier_name, order_date, time_order, total, paid, due)
-        values(:name, :orderdate, :timeorder, :total, :paid, :due)");
+        $insert = $pdo->prepare("INSERT INTO tbl_invoice(cashier_name, order_date, time_order, total, paid, due,customer_name)
+        values(:name, :orderdate, :timeorder, :total, :paid, :due, :customer_name)");
 
         $insert->bindParam(':name', $cashier_name);
         $insert->bindParam(':orderdate',  $order_date);
@@ -67,6 +68,7 @@
         $insert->bindParam(':total', $total);
         $insert->bindParam(':paid', $paid);
         $insert->bindParam(':due', $due);
+        $insert->bindParam(':customer_name', $customer_name);
 
         $insert->execute();
 
@@ -107,7 +109,7 @@
             $insert->execute();
 
           }
-          // echo '<script>location.href="order.php";</script>';
+          echo '<script>location.href="order.php";</script>';
 
         }
       }
@@ -199,6 +201,16 @@
             </div>
             <div class="box-body">
               <div class="col-md-offset-1 col-md-10">
+                <div class="form-group">
+                  <label>Customer Name</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <span>Name</span>
+                    </div>
+                    <input type="text" class="form-control pull-right" name="customer_name" id="customer_name" required>
+                  </div>
+                  <!-- /.input group -->
+                </div>
                 <div class="form-group">
                   <label>Total</label>
                   <div class="input-group">

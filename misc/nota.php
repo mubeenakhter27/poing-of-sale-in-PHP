@@ -40,10 +40,16 @@ $pdf->SetFont('Courier','BI',8);
 $pdf->Cell(10,4 ,$row->invoice_id,0,1,'C');
 
 $pdf->SetFont('Courier','B',8);
+$pdf->Cell(20,4 ,'Customer Name :',0,0,'C');
+
+$pdf->SetFont('Courier','BI',8);
+$pdf->Cell(30,4 ,$row->customer_name,0,1,'C');
+
+$pdf->SetFont('Courier','B',8);
 $pdf->Cell(20,4 ,'Officer Name :',0,0,'C');
 
 $pdf->SetFont('Courier','BI',8);
-$pdf->Cell(10,4 ,$row->cashier_name,0,1,'C');
+$pdf->Cell(30,4 ,$row->cashier_name,0,1,'C');
 
 $pdf->SetFont('Courier','B',8);
 $pdf->Cell(20,4 ,'Date & Time:',0,0,'C');
@@ -58,24 +64,24 @@ $pdf->SetY(55);
 
 $pdf->SetX(6);
 $pdf->SetFont('Arial','B',8);
-$pdf->Cell(27,8 ,'Product',1,0,'C');
+$pdf->Cell(43,8 ,'Product',1,0,'C');
 $pdf->SetFont('Arial','B',8);
 $pdf->Cell(7,8 ,'Qty',1,0,'C');
 $pdf->SetFont('Arial','B',8);
-$pdf->Cell(18,8 ,'Price',1,0,'C');
+$pdf->Cell(10,8 ,'Price',1,0,'C');
 $pdf->SetFont('Arial','B',8);
-$pdf->Cell(18,8 ,'Total',1,1,'C');
+$pdf->Cell(10,8 ,'Total',1,1,'C');
 
 $select = $pdo->prepare("SELECT * FROM tbl_invoice_detail WHERE invoice_id=$id");
 $select->execute();
 while($item = $select->fetch(PDO::FETCH_OBJ)){
     $pdf->SetX(6);
     $pdf->SetFont('Arial','B',8);
-    $pdf->Cell(27,5,$item->product_name,1,0,'L');
+    $pdf->Cell(43,5,$item->product_name,1,0,'L');
     $pdf->Cell(7,5,$item->qty,1,0,'C');
     $pdf->SetFont('Arial','B',7);
-    $pdf->Cell(18,5,'Rp '.number_format($item->price),1,0,'R');
-    $pdf->Cell(18,5,'Rp '.number_format($item->total),1,1,'R');
+    $pdf->Cell(10,5,number_format($item->price),1,0,'R');
+    $pdf->Cell(10,5,number_format($item->total),1,1,'R');
 }
 
 //////////////////////////////////////////////

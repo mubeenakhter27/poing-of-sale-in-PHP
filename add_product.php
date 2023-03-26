@@ -179,12 +179,12 @@
                         <div class="form-group">
                             <label for="">Capital price</label>
                             <input type="number"class="form-control"
-                            name="purchase_price" required>
+                            name="purchase_price">
                         </div>
                         <div class="form-group">
                             <label for="">Selling price</label>
                             <input type="number" class="form-control"
-                            name="sell_price" required>
+                            name="sell_price">
                         </div>
                     </div>
 

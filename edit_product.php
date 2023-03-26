@@ -104,7 +104,7 @@
                 $update = $pdo->prepare("UPDATE tbl_product SET product_code=:product_code,product_name=:product_name,
                 product_category=:product_category, purchase_price=:purchase_price, sell_price=:sell_price,
                 stock=:stock,min_stock=:min_stock, product_satuan=:product_satuan ,description=:description, img=:img WHERE product_id=$id");
-
+                     
                 $update->bindParam('product_code', $code_req);
                 $update->bindParam('product_name', $product_req);
                 $update->bindParam('product_category', $category_req);
@@ -185,13 +185,13 @@
                             <label for="">Capital price</label>
                             <input type="number" min="" step="100"
                             class="form-control"
-                            name="purchase_price" value="<?php echo $purchase_db; ?>" required>
+                            name="purchase_price" value="<?php echo $purchase_db; ?>" >
                         </div>
                         <div class="form-group">
                             <label for="">Selling price</label>
                             <input type="number" min="" step="100"
                             class="form-control"
-                            name="sell_price" value="<?php echo $sell_db; ?>" required>
+                            name="sell_price" value="<?php echo $sell_db; ?>" >
                         </div>
                     </div>
 
@@ -228,7 +228,7 @@
                         <div class="form-group">
                             <label for="">Product Description</label>
                             <textarea name="description" id="description"
-                            cols="30" rows="10" class="form-control" required><?php echo $desc_db; ?></textarea>
+                            cols="30" rows="10" class="form-control" ><?php echo $desc_db; ?></textarea>
                         </div>
                     </div>
 
