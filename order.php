@@ -59,6 +59,7 @@
                             <tr>
                                 <th style="width:20px;">No</th>
                                 <th style="width:100px;">Officer</th>
+                                <th style="width:100px;">Customer Name</th>
                                 <th style="width:100px;">Date</th>
                                 <th style="width:100px;">Amount</th>
                                 <th style="width:50px;">Option</th>
@@ -74,6 +75,7 @@
                                 <tr>
                                 <td><?php echo $no++ ; ?></td>
                                 <td class="text-uppercase"><?php echo $row->cashier_name; ?></td>
+                                <td class="text-uppercase"><?php echo $row->customer_name; ?></td>
                                 <td><?php echo $row->order_date; ?></td>
                                 <td>Rp. <?php echo number_format($row->total); ?></td>
                                 <td>
