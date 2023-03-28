@@ -36,6 +36,7 @@
       $total = $_POST['total'];
       $customer_name = $_POST['customer_name'];
       $paid = $_POST['paid'];
+      $discount = $_POST['discount'];
       $due = $_POST['due'];
 
 
@@ -59,8 +60,8 @@
       }else{
 
 
-        $insert = $pdo->prepare("INSERT INTO tbl_invoice(cashier_name, order_date, time_order, total, paid, due,customer_name)
-        values(:name, :orderdate, :timeorder, :total, :paid, :due, :customer_name)");
+        $insert = $pdo->prepare("INSERT INTO tbl_invoice(cashier_name, order_date, time_order, total, paid, due,customer_name,discount)
+        values(:name, :orderdate, :timeorder, :total, :paid, :due, :customer_name, :discount)");
 
         $insert->bindParam(':name', $cashier_name);
         $insert->bindParam(':orderdate',  $order_date);
@@ -69,6 +70,7 @@
         $insert->bindParam(':paid', $paid);
         $insert->bindParam(':due', $due);
         $insert->bindParam(':customer_name', $customer_name);
+        $insert->bindParam(':discount', $discount);
 
         $insert->execute();
 
@@ -222,6 +224,16 @@
                   <!-- /.input group -->
                 </div>
                 <div class="form-group">
+                  <label>Discount</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <span>Rp</span>
+                    </div>
+                    <input type="text" class="form-control pull-right" name="discount" id="discount" required>
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                <div class="form-group">
                   <label>Money Received</label>
                   <div class="input-group">
                     <div class="input-group-addon">
@@ -281,7 +293,7 @@
         echo fill_product($pdo)?></select></td>';
         html+='<td><input type="text" class="form-control productname" style="width:200px;" name="productname[]" readonly></td>';
         html+='<td><input type="text" class="form-control productstock" style="width:50px;" name="productstock[]" readonly></td>';
-        html+='<td><input type="text" class="form-control productprice" style="width:100px;" name="productprice[]" readonly></td>';
+        html+='<td><input type="text" class="form-control productprice" style="width:100px;" name="productprice[]"></td>';
         html+='<td><input type="number" min="1" max="50" class="form-control quantity_product" style="width:100px;" name="quantity[]" required></td>';
         html+='<td><input type="text" class="form-control productsatuan" style="width:100px;" name="productsatuan[]" readonly></td>';
         html+='<td><input type="text" class="form-control producttotal" style="width:150px;" name="producttotal[]" readonly></td>';
@@ -335,12 +347,28 @@
       function calculate(paid){
         var net_total = 0;
         var paid = paid;
+        var discount = $("#discount").val();
 
         $(".producttotal").each(function(){
           net_total = net_total + ($(this).val()*1);
         })
 
-        due = net_total - paid;
+        due = net_total - paid - discount;
+
+        $("#total").val(net_total);
+        $("#due").val(due);
+      }
+
+      function discountCalculate(discount){
+        var net_total = 0;
+        var discount = discount;
+        var paid = $("#paid").val();
+
+        $(".producttotal").each(function(){
+          net_total = net_total + ($(this).val()*1);
+        })
+
+        due = net_total - discount - paid;
 
         $("#total").val(net_total);
         $("#due").val(due);
@@ -350,6 +378,11 @@
       $("#paid").keyup(function(){
         var paid = $(this).val();
         calculate(paid);
+      })
+
+      $("#discount").keyup(function(){
+        var discount = $(this).val();
+        discountCalculate(discount);
       })
 
     });

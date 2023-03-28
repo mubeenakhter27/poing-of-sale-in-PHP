@@ -94,6 +94,13 @@ $pdf->Cell(1,8 ,'Rp ' . number_format($row->total),0,1,'C');
 
 $pdf->SetX(43);
 $pdf->SetFont('Arial','BI',7);
+$pdf->Cell(25,4 ,'Disc   :',0,0,'C');
+
+$pdf->SetFont('Arial','BI',7);
+$pdf->Cell(1,4 ,'Rp '. number_format($row->discount),0,1,'C');
+
+$pdf->SetX(43);
+$pdf->SetFont('Arial','BI',7);
 $pdf->Cell(25,4 ,'Paid   :',0,0,'C');
 
 $pdf->SetFont('Arial','BI',7);
